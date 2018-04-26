@@ -7,6 +7,7 @@ Public Class Form1
     Dim sizeScreenFrame As Size = New Size(615, 460)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Me.MaximumSize = sizeScreenFrame
         Me.MinimumSize = sizeScreenFrame
         Me.MaximizeBox = False
@@ -17,6 +18,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles bottomInicio.Click
+        Call info_bd()
         Me.Hide()
         Form2.Show()
 

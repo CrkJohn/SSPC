@@ -48,9 +48,9 @@ Partial Class Form2
         Me.CheckBox1.Font = New System.Drawing.Font("Script MT Bold", 20.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox1.Location = New System.Drawing.Point(123, 204)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(129, 37)
+        Me.CheckBox1.Size = New System.Drawing.Size(189, 37)
         Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "Usuario "
+        Me.CheckBox1.Text = "Administrador"
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'CheckBox2
@@ -60,9 +60,9 @@ Partial Class Form2
         Me.CheckBox2.Font = New System.Drawing.Font("Script MT Bold", 20.0!, System.Drawing.FontStyle.Bold)
         Me.CheckBox2.Location = New System.Drawing.Point(380, 204)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(178, 37)
+        Me.CheckBox2.Size = New System.Drawing.Size(122, 37)
         Me.CheckBox2.TabIndex = 3
-        Me.CheckBox2.Text = "Adminitrador"
+        Me.CheckBox2.Text = "Usuario"
         Me.CheckBox2.UseVisualStyleBackColor = False
         '
         'Label2
@@ -78,10 +78,12 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(252, 273)
+        Me.Button1.BackColor = System.Drawing.Color.Maroon
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.Location = New System.Drawing.Point(183, 289)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(118, 29)
+        Me.Button1.Size = New System.Drawing.Size(251, 33)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = False

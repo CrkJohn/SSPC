@@ -1,0 +1,11 @@
+﻿Public Class Administrador
+    Dim screenWidth As Integer = Screen.PrimaryScreen.Bounds.Width
+    Dim screenHeight As Integer = Screen.PrimaryScreen.Bounds.Height
+    Dim sizeScreenFrame As Size = New Size(626, 456)
+    Private Sub Administrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximumSize = sizeScreenFrame
+        Me.MinimumSize = sizeScreenFrame
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+    End Sub
+End Class

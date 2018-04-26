@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador.Designer.vb">
+      <DependentUpon>Administrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +86,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+      <DependentUpon>panelInicial.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="panelInicial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InformacionAdmistrador.Designer.vb">
+      <DependentUpon>InformacionAdmistrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InformacionAdmistrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -100,19 +113,43 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RegistrarInformacion.Designer.vb">
+      <DependentUpon>RegistrarInformacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarInformacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="validarAdministrador.Designer.vb">
+      <DependentUpon>validarAdministrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="validarAdministrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+      <DependentUpon>panelInicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformacionAdmistrador.resx">
+      <DependentUpon>InformacionAdmistrador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarInformacion.resx">
+      <DependentUpon>RegistrarInformacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="validarAdministrador.resx">
+      <DependentUpon>validarAdministrador.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +162,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

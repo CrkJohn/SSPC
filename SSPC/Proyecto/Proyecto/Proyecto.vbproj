@@ -78,6 +78,12 @@
     <Compile Include="Administrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="animales.Designer.vb">
+      <DependentUpon>animales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="animales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     <Compile Include="RegistrarInformacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuario.Designer.vb">
+      <DependentUpon>Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="validarAdministrador.Designer.vb">
       <DependentUpon>validarAdministrador.vb</DependentUpon>
     </Compile>
@@ -129,6 +141,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="animales.resx">
+      <DependentUpon>animales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarInformacion.resx">
       <DependentUpon>RegistrarInformacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="validarAdministrador.resx">
       <DependentUpon>validarAdministrador.vb</DependentUpon>

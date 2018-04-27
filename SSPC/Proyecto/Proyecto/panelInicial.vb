@@ -9,13 +9,13 @@
         Me.MinimumSize = sizeScreenFrame
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+        CheckBox1.Refresh()
+        CheckBox2.Refresh()
     End Sub
 
-    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
-    End Sub
 
-    'Usuario'
+    'Admin'
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
 
         validarAdministrador.Show()
@@ -24,10 +24,10 @@
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
         Me.Hide()
-        'Form4.show()'
+        Usuario.Show()
     End Sub
 
-    'Adminitrador'
+    'Usuario'
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         Application.ExitThread()

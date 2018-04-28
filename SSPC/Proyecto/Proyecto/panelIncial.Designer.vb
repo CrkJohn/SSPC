@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Administrador
+Partial Class panelIncial
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,20 +14,20 @@ Partial Class Administrador
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
+    'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administrador))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(panelIncial))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -35,44 +35,33 @@ Partial Class Administrador
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Script MT Bold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(182, 72)
+        Me.Label1.Location = New System.Drawing.Point(171, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(219, 44)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Adminitrador"
+        Me.Label1.Size = New System.Drawing.Size(207, 44)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Menu inicial"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Script MT Bold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(36, 131)
+        Me.Label2.Location = New System.Drawing.Point(38, 98)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(277, 44)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Que deseria hacer"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Maroon
-        Me.Button1.Location = New System.Drawing.Point(396, 362)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Regresar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label2.Size = New System.Drawing.Size(311, 44)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Que deseas escoger?"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.White
         Me.CheckBox1.Font = New System.Drawing.Font("Script MT Bold", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox1.Location = New System.Drawing.Point(146, 221)
+        Me.CheckBox1.Location = New System.Drawing.Point(61, 175)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(276, 37)
-        Me.CheckBox1.TabIndex = 11
-        Me.CheckBox1.Text = "Informacion  usuarios"
+        Me.CheckBox1.Size = New System.Drawing.Size(178, 37)
+        Me.CheckBox1.TabIndex = 9
+        Me.CheckBox1.Text = "Adminitrador"
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'CheckBox2
@@ -80,26 +69,38 @@ Partial Class Administrador
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.BackColor = System.Drawing.Color.White
         Me.CheckBox2.Font = New System.Drawing.Font("Script MT Bold", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox2.Location = New System.Drawing.Point(146, 283)
+        Me.CheckBox2.Location = New System.Drawing.Point(353, 175)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(319, 37)
-        Me.CheckBox2.TabIndex = 12
-        Me.CheckBox2.Text = "Registar prueba Actividad"
+        Me.CheckBox2.Size = New System.Drawing.Size(133, 37)
+        Me.CheckBox2.TabIndex = 10
+        Me.CheckBox2.Text = "Usuarios"
         Me.CheckBox2.UseVisualStyleBackColor = False
         '
-        'Administrador
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Maroon
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.Location = New System.Drawing.Point(179, 277)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(251, 33)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'panelIncial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(591, 447)
+        Me.ClientSize = New System.Drawing.Size(624, 449)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Administrador"
-        Me.Text = "Administrador"
+        Me.Name = "panelIncial"
+        Me.Text = "panelIncial"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -107,7 +108,7 @@ Partial Class Administrador
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Button1 As Button
 End Class

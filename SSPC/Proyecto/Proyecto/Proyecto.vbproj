@@ -72,10 +72,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actividadAnimales.Designer.vb">
+      <DependentUpon>actividadAnimales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="actividadAnimales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administrador.Designer.vb">
       <DependentUpon>Administrador.vb</DependentUpon>
     </Compile>
     <Compile Include="Administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarPrueba.Designer.vb">
+      <DependentUpon>agregarPrueba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agregarPrueba.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="animales.Designer.vb">
@@ -89,12 +101,6 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>panelInicial.vb</DependentUpon>
-    </Compile>
-    <Compile Include="panelInicial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformacionAdmistrador.Designer.vb">
@@ -119,10 +125,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="panelIncial.Designer.vb">
+      <DependentUpon>panelIncial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="panelIncial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panelUsuario.Designer.vb">
+      <DependentUpon>panelUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="panelUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RegistrarInformacion.Designer.vb">
       <DependentUpon>RegistrarInformacion.vb</DependentUpon>
     </Compile>
     <Compile Include="RegistrarInformacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarNuevoUsuario.Designer.vb">
+      <DependentUpon>registrarNuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registrarNuevoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuario.Designer.vb">
@@ -137,19 +161,28 @@
     <Compile Include="validarAdministrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="validarUsuario.Designer.vb">
+      <DependentUpon>validarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="validarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="actividadAnimales.resx">
+      <DependentUpon>actividadAnimales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarPrueba.resx">
+      <DependentUpon>agregarPrueba.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="animales.resx">
       <DependentUpon>animales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>panelInicial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionAdmistrador.resx">
       <DependentUpon>InformacionAdmistrador.vb</DependentUpon>
@@ -160,14 +193,26 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="panelIncial.resx">
+      <DependentUpon>panelIncial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panelUsuario.resx">
+      <DependentUpon>panelUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrarInformacion.resx">
       <DependentUpon>RegistrarInformacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarNuevoUsuario.resx">
+      <DependentUpon>registrarNuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="validarAdministrador.resx">
       <DependentUpon>validarAdministrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="validarUsuario.resx">
+      <DependentUpon>validarUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

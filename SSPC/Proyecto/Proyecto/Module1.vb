@@ -52,7 +52,7 @@ Module Module1
         Dim dt As DataTable
         Dim c1 As String
         Dim c2 As String
-        c1 = "Select  promedio From  informacionBase Where Usuario = '" & m & "'"
+        c1 = "Select  * From  informacionBase Where Usuario = '" & m & "'"
         c2 = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " & ubic & "\Database11.mdb " & ";"
         da = New OleDb.OleDbDataAdapter(c1, c2)
         dt = New DataTable
@@ -116,8 +116,8 @@ Module Module1
         Dim rs As OleDb.OleDbCommand
         j.Open()
         Dim n As String = "INSERT INTO " & agregarPrueba.ComboBox1.SelectedItem & " 
-                                        (nombreEspanol,nombreIngles, imagen) 
-         VALUES ('" & nombreEspanol & "', '" & nombreIngles & "', null )"
+                                        (nombreEspanol,nombreIngles) 
+         VALUES ('" & nombreEspanol & "', '" & nombreIngles & "')"
         rs = New OleDb.OleDbCommand(n, j)
         rs.ExecuteNonQuery()
         j.Close()
@@ -165,10 +165,108 @@ Module Module1
         End If
     End Sub
 
-    Sub actualizacionPuntaje()
+    Sub actualizacionPuntaje(jugador)
+        Dim da As OleDb.OleDbDataAdapter
+        Dim dt As DataTable
+        Dim i As Integer
+        Dim c1 As String
+        Dim c2 As String
+        Dim k As Integer = 0
+        Dim newPromedio As Integer = 0
+        c1 = "Select  * From  informacionBase Where Usuario = '" & jugador & "'"
+        c2 = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " & ubic & "\Database11.mdb " & ";"
+        da = New OleDb.OleDbDataAdapter(c1, c2)
+        dt = New DataTable
+        da.Fill(dt)
+        i = dt.Rows.Count
+
+        If i > 0 Then
+            k = k + dt.Rows(i - 1)("PuntajeActividad1")
+            k = k + dt.Rows(i - 1)("PuntajeActividad2")
+            k = k + dt.Rows(i - 1)("PuntajeActividad3")
+            k = k + dt.Rows(i - 1)("PuntajeActividad4")
+            k = k + dt.Rows(i - 1)("PuntajeActividad5")
+            If k <> 0 Then
+                newPromedio = (k + dt.Rows(i - 1)("Promedio")) / 2
+            End If
+            Dim rsc As OleDb.OleDbCommand
+            j.Open()
+            c1 = "update informacionBase set Promedio = " & newPromedio & "  
+              WHERE usuario = '" & jugador & "'"
+            rsc = New OleDb.OleDbCommand(c1, j)
+            rsc.ExecuteNonQuery()
+            j.Close()
+
+        End If
+    End Sub
+
+    Sub actualizacionPuntajeAnimales(acum, jugador)
+        Dim c1 As String
+        Dim rsc As OleDb.OleDbCommand
+        j.Open()
+        c1 = "update informacionBase 
+            set PuntajeActividad1 = PuntajeActividad1 + " & acum & "
+                  WHERE usuario = '" & jugador & "'"
+        rsc = New OleDb.OleDbCommand(c1, j)
+        rsc.ExecuteNonQuery()
+        j.Close()
+    End Sub
+
+
+    Sub actuliazacionPuntajeNumero(acum, jugador)
+        Dim c1 As String
+        Dim rsc As OleDb.OleDbCommand
+        j.Open()
+        c1 = "update informacionBase
+              set PuntajeActividad2 = PuntajeActividad2  + " & acum & "
+              WHERE usuario = '" & jugador & "'"
+        rsc = New OleDb.OleDbCommand(c1, j)
+        rsc.ExecuteNonQuery()
+        j.Close()
+    End Sub
+
+    Sub actualizacionPuntajeColores(acum, jugador)
+        Dim c1 As String
+        Dim rsc As OleDb.OleDbCommand
+        j.Open()
+
+        c1 = "update informacionBase 
+              set PuntajeActividad3 = PuntajeActividad3 + " & acum & "  
+              WHERE usuario = '" & jugador & "'"
+        rsc = New OleDb.OleDbCommand(c1, j)
+        rsc.ExecuteNonQuery()
+        j.Close()
 
     End Sub
 
+
+
+    Sub actualizacionPuntajeFamilia(acum, jugador)
+        Dim c1 As String
+        Dim rsc As OleDb.OleDbCommand
+        j.Open()
+
+        c1 = "update informacionBase 
+              set PuntajeActividad4 = PuntajeActividad4 + " & acum & "  
+              WHERE usuario = '" & jugador & "'"
+        rsc = New OleDb.OleDbCommand(c1, j)
+        rsc.ExecuteNonQuery()
+        j.Close()
+
+    End Sub
+
+    Sub actualizacionPuntajeFrutas(acum, jugador)
+        Dim c1 As String
+        Dim rsc As OleDb.OleDbCommand
+
+        j.Open()
+        c1 = "update informacionBase 
+                set PuntajeActividad5 = PuntajeActividad5 + " & acum & "  
+              WHERE usuario = '" & jugador & "'"
+        rsc = New OleDb.OleDbCommand(c1, j)
+        rsc.ExecuteNonQuery()
+        j.Close()
+    End Sub
 
     Sub reinicar(actividad)
         Dim da As OleDb.OleDbDataAdapter
@@ -184,40 +282,34 @@ Module Module1
         da.Fill(dt)
         i = dt.Rows.Count - 1
         Dim value As Integer = CInt(Int((i * Rnd())))
-        actividadAnimales.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
-        actividadAnimales.Label2.Text = "Cual  es el nombre de " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+        If actividad.Equals("Animales") Then
+            actividadAnimales.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
+            actividadAnimales.Label2.Text = "Cual  es el nombre de " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+        ElseIf actividad.Equals("Numeros") Then
+            Numeros.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
+            Numeros.Label2.Text = "Como se escribe el  " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+        ElseIf actividad.Equals("Familia") Then
+            Familia.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
+            Familia.Label2.Text = "Como se escribe el  " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+        ElseIf actividad.Equals("Frutas") Then
+            Frutas.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
+            Frutas.Label2.Text = "Como se escribe el  " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+        ElseIf actividad.Equals("Colores") Then
+            Colores.setRespuesta(dt.Rows(value)("nombreIngles").ToString())
+            Colores.Label2.Text = "Como se escribe el  " & dt.Rows(value)("nombreEspanol").ToString() & " en ingles?"
+
+        End If
     End Sub
 
-    Sub actualiarPuntajeJugador(JUGADOR)
-        Dim a As Integer
-        Dim b As Integer
+    Sub actualiarPuntajeJugador(JUGADOR, Actividad)
         Dim c As String
         Dim rsc As OleDb.OleDbCommand
         j.Open()
-        c = "update informacionBase set PuntajeActividad1 = PuntajeActividad1 + 1 
+        c = "update informacionBase set " & Actividad & " = " & Actividad & " + 1  
               WHERE usuario = '" & JUGADOR & "'"
         rsc = New OleDb.OleDbCommand(c, j)
         rsc.ExecuteNonQuery()
         j.Close()
-
     End Sub
-    Sub puntajeActividadGato(jugador)
-        Dim da As OleDb.OleDbDataAdapter
-        Dim dt As DataTable
-        Dim i As Integer
-        Dim c1 As String
-        Dim c2 As String
-        Dim k As Integer
-        c1 = "SELECT * from informacionBase Where usuario = '" & jugador & "'"
-        c2 = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source= " & ubic & "\Database11.mdb " & ";"
-        da = New OleDb.OleDbDataAdapter(c1, c2)
-        dt = New DataTable
-        da.Fill(dt)
-        i = dt.Rows.Count
-        MsgBox(i)
 
-        If i > 0 Then
-            actividadAnimales.Label3.Text = "Puntaje de Actividad " & dt.Rows(i - 1)("PuntajeActividad1").ToString()
-        End If
-    End Sub
 End Module

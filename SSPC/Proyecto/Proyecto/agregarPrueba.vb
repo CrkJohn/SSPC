@@ -9,6 +9,11 @@
     End Sub
 
     Private Sub agregarPrueba_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.BackgroundImage = System.Drawing.Image.FromFile("C:\Users\leidy\Downloads\SSPC-master\SSPC\Imagenes\Base.jpg")
+        Me.Label1.BackColor = Color.Transparent
+        Me.Label2.BackColor = Color.Transparent
+        Me.Label3.BackColor = Color.Transparent
+        Me.Label4.BackColor = Color.Transparent
         Me.MaximumSize = sizeScreenFrame
         Me.MinimumSize = sizeScreenFrame
         Me.MaximizeBox = False

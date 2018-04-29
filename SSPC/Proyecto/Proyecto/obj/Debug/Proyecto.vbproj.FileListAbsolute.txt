@@ -50,7 +50,6 @@ C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.e
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.xml
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Administrador.resources
-C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.animales.resources
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Form1.resources
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.InformacionAdmistrador.resources
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Resources.resources
@@ -68,3 +67,7 @@ C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\bin\Debug\Proyecto.x
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.registrarNuevoUsuario.resources
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.agregarPrueba.resources
 C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.actividadAnimales.resources
+C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Colores.resources
+C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Familia.resources
+C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Frutas.resources
+C:\Users\leidy\Downloads\SSPC-master\SSPC\Proyecto\Proyecto\obj\Debug\Proyecto.Numeros.resources

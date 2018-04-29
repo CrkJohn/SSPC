@@ -99,7 +99,7 @@ Partial Class actividadAnimales
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(151, 23)
         Me.Button3.TabIndex = 16
-        Me.Button3.Text = "Reiniciar"
+        Me.Button3.Text = "Siguiente"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'actividadAnimales

@@ -90,10 +90,16 @@
     <Compile Include="agregarPrueba.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="animales.Designer.vb">
-      <DependentUpon>animales.vb</DependentUpon>
+    <Compile Include="Colores.Designer.vb">
+      <DependentUpon>Colores.vb</DependentUpon>
     </Compile>
-    <Compile Include="animales.vb">
+    <Compile Include="Colores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Familia.Designer.vb">
+      <DependentUpon>Familia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Familia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frutas.Designer.vb">
+      <DependentUpon>Frutas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frutas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InformacionAdmistrador.Designer.vb">
@@ -124,6 +136,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Numeros.Designer.vb">
+      <DependentUpon>Numeros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Numeros.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="panelIncial.Designer.vb">
       <DependentUpon>panelIncial.vb</DependentUpon>
@@ -178,11 +196,17 @@
     <EmbeddedResource Include="agregarPrueba.resx">
       <DependentUpon>agregarPrueba.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="animales.resx">
-      <DependentUpon>animales.vb</DependentUpon>
+    <EmbeddedResource Include="Colores.resx">
+      <DependentUpon>Colores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Familia.resx">
+      <DependentUpon>Familia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frutas.resx">
+      <DependentUpon>Frutas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformacionAdmistrador.resx">
       <DependentUpon>InformacionAdmistrador.vb</DependentUpon>
@@ -192,6 +216,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numeros.resx">
+      <DependentUpon>Numeros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="panelIncial.resx">
       <DependentUpon>panelIncial.vb</DependentUpon>

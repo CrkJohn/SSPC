@@ -1,4 +1,3 @@
-﻿
 Module Module1
     Dim ubic As String = "C:\Users\leidy\Downloads\SSPC-master\SSPC"
 
@@ -106,6 +105,19 @@ Module Module1
         rs = New OleDb.OleDbCommand(n, j)
         rs.ExecuteNonQuery()
         j.Close()
+        Call registrarAux(usuario)
+    End Sub
+
+
+    Sub registrarAux(m)
+        Dim rs As OleDb.OleDbCommand
+        j.Open()
+        Dim n As String = "INSERT INTO  informacionBase (usuario, puntajeActividad1, puntajeActividad2, puntajeActividad3,puntajeActividad4,puntajeActividad5,promedio) 
+            VALUES ('" & m & "',0,0,0,0,0,0)"
+        rs = New OleDb.OleDbCommand(n, j)
+        rs.ExecuteNonQuery()
+        j.Close()
+
     End Sub
 
     Sub registrarPrueba()
